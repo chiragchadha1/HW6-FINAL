@@ -1,0 +1,64 @@
+load img/vadim-sadovsk.jpg v
+load img/vmask.jpg mask
+
+red-component v v-red
+
+green-component v v-green
+
+blue-component v v-blue
+
+value-component v v-value
+
+luma-component v v-luma
+
+intensity-component v v-intensity
+
+horizontal-flip v v-horizontal
+
+vertical-flip v v-vertical
+
+brighten 50 v v-brighten
+
+brighten -50 v v-darken
+
+greyscale v v-grey
+
+sepia v v-sepia
+
+blur v v-blur
+
+sharpen v v-sharpen
+
+downscale 100 100 v vsmall
+downscale 300 300 v vsmallish
+save res/vadimsmall.jpg vsmall
+save res/vadimsmallish.jpg vsmallish
+
+sharpen v mask sharpenmask
+red-component v mask redmask
+greyscale v mask greymask
+brighten 50 v mask brightenmask
+sepia v mask sepiamask
+blur v mask blurmask
+
+save res/v-sharpenmask.jpg sharpenmask
+save res/v-redmask.jpg redmask
+save res/v-greymask.ppm greymask
+save res/v-brightenmask.jpg brightenmask
+save res/v-sepiamask.ppm sepiamask
+save res/v-blurmask.jpg blurmask
+
+save res/v-red.ppm v-red
+save res/v-green.png v-green
+save res/v-blue.jpg v-blue
+save res/v-value.bmp v-value
+save res/v-luma.ppm v-luma
+save res/v-intensity.png v-intensity
+save res/v-horizontal.jpg v-horizontal
+save res/v-vertical.bmp v-vertical
+save res/v-brighten.ppm v-brighten
+save res/v-darken.png v-darken
+save res/v-grey.jpg v-grey
+save res/v-sepia.bmp v-sepia
+save res/v-blur.ppm v-blur
+save res/v-sharpen.png v-sharpen

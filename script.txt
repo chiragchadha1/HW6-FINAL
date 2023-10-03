@@ -1,0 +1,42 @@
+load img/vadim-sadovsk.jpg v
+load img/personal.ppm p
+load img/transparent.png t
+load img/monique-sherar.bmp m
+load img/Koala.ppm k
+load img/koalamaskfile.jpg mask
+
+sharpen k mask sharpenmask
+red-component k mask redmask
+greyscale k mask greymask
+brighten 50 k mask brightenmask
+sepia k mask sepiamask
+blur k mask blurmask
+
+save img/results/koala-sharpenmask.jpg sharpenmask
+save img/results/koala-redmask.jpg redmask
+save img/results/koala-greymask.ppm greymask
+save img/results/koala-brightenmask.jpg brightenmask
+save img/results/koala-sepiamask.ppm sepiamask
+save img/results/koala-blurmask.jpg blurmask
+
+sharpen v vs
+blue-component vs vb
+horizontal-flip vb vh
+
+greyscale p pg
+brighten 50 pg pb
+
+sepia t ts
+blur ts tb
+vertical-flip tb tv
+
+brighten -50 m mb
+sepia mb ms
+
+downscale 200 200 k down
+
+save img/results/vadim-final.ppm vh
+save img/results/personal-final.jpg pb
+save img/results/transparent-final.png tv
+save img/results/monique-final.ppm ms
+save img/results/koala-final.jpg down
